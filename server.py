@@ -24,8 +24,7 @@ def process_data(conn, ip_addr):
     timestamp_list = []
     data = b''
     payload_size = struct.calcsize('Q')
-    frame_count = 0
-    total_time = 0
+    frame_count = 0; total_time = 0
     while True:   
         # Retrieve message size
         while len(data) < payload_size:
