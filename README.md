@@ -13,6 +13,7 @@ sudo apt install -y libopencv-dev python3-opencv
 
 
 **Server:**
+
 sudo apt update
 
 sudo apt install -y python3 python3-pip
