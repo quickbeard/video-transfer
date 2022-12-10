@@ -20,8 +20,7 @@ while True:
     local_start_time = time.time()
     while True:
         os.system(cmd)
-        if (time.time() - local_start_time) > busy:
-            break
+        if (time.time() - local_start_time) > busy: break
         # if os.system(cmd) takes a long time, it won't stop until it finishes.
         # Therefore, in client.py, we should pick a frame limit and break when it reaches that limit
     
