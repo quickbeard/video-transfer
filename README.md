@@ -2,7 +2,7 @@
 
 Serialize and send a video between clients - servers.
 
-## **SERVER**
+## **Server**
 
 `sudo apt update`
 
@@ -22,7 +22,7 @@ You must first create a new port for listening: Pick a port number bigger than 1
 
 Then run `python3 server.py`.
 
-## **CLIENT**
+## **Client**
 
 `sudo apt update`
 
