@@ -1,7 +1,7 @@
 # video-transfer
 Serialize and send a video between one client and multiple servers.
 
-+++++++++++++++++++++++++++++++++++++**CLIENT**++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++**CLIENT**+++++++++++++++++++++++++++++++++++++++++++++
 
 sudo apt update
 
