@@ -17,6 +17,8 @@ Create a new port for listening. Pick a port number bigger than 1023, i.e., 1024
 Don't forget to replace the port number in the Python code and make sure the chosen port is not being used:
 
 netstat -lntu
+
 netstat -an | grep :2022
+
 sudo ufw allow 2022
 
