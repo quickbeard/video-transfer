@@ -1,7 +1,7 @@
 # video-transfer
 Serialize and send a video between one client and multiple servers.
 
-+++++++**Client:**+++++++
++++++++++++++++++++++++++++++++++++++++++**Client:**+++++++++++++++++++++++++++++++++++++++++
 
 sudo apt update
 
@@ -12,7 +12,7 @@ sudo pip3 install numpy pandas scipy
 sudo apt install -y libopencv-dev python3-opencv
 
 
-+++++++**Server:**+++++++
++++++++++++++++++++++++++++++++++++++++++**Server:**+++++++++++++++++++++++++++++++++++++++++
 
 sudo apt update
 
