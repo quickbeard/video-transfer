@@ -25,8 +25,7 @@ def send_video_frames(client_socket, filename):
     while cap.isOpened():
         ret, frame = cap.read()
         # if video finished or no Video Input
-        if not ret:
-            break
+        if not ret: break
         # Serialize frame
         data = pickle.dumps(frame)
         # message length
@@ -35,8 +34,7 @@ def send_video_frames(client_socket, filename):
         client_socket.sendall(message_size + data)
         print('Sent', frame_count, 'frames', end = '\r')
         frame_count += 1
-        if frame_count == FRAME_LIM:
-            break
+        if frame_count == FRAME_LIM: break
         time.sleep(0.03)
 
     cap.release()
