@@ -33,16 +33,3 @@ while True:
     if (time.time() - global_start_time) > max_time: break
         
 print('Running time:', round((time.time()-start_time)/60, 3), 'minutes.')
-
-'''
-s1 -> h1, h2
-s2 -> h2, h3
-s3 -> h3, h4
-s4 -> h5, h6
-
-mega_script_client.py on host 1
-server_list = ['s1']
-
-mega_script_client.py on host 2
-server_list = ['s1', 's2']
-'''
