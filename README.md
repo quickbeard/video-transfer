@@ -1,5 +1,5 @@
 # video-transfer
-Serialize and send a video between one client and multiple servers.
+Serialize and send a video between clients - servers.
 
 +++++++++++++++++++++++++++++++++++++**SERVER**+++++++++++++++++++++++++++++++++
 
