@@ -60,8 +60,7 @@ def process_data(conn, ip_addr):
     # df.to_csv(OUTPUT_CSV, mode = 'a', header = False, index = False)
 
 
-epoch = 0
-thread_count = 0
+epoch = 0; thread_count = 0
 while True:
     conn, addr = server_socket.accept()
     print()
