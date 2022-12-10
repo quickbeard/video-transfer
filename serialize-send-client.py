@@ -15,8 +15,10 @@ FRAME_LIM = 800
 def establish_connection():
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     print(f'Connecting to {DEST_IP}:{DEST_PORT}')
+    
     client_socket.connect((DEST_IP, DEST_PORT))
     print('Connected.')
+    
     return client_socket
 
 def send_video_frames(client_socket, filename):
@@ -26,13 +28,16 @@ def send_video_frames(client_socket, filename):
         ret, frame = cap.read()
         # if video finished or no Video Input
         if not ret: break
+            
         # Serialize frame
         data = pickle.dumps(frame)
         # message length
         message_size = struct.pack('Q', len(data))
+        
         # Send all
         client_socket.sendall(message_size + data)
         print('Sent', frame_count, 'frames', end = '\r')
+        
         frame_count += 1
         if frame_count == FRAME_LIM: break
         time.sleep(0.03)
