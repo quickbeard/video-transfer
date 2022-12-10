@@ -1,19 +1,6 @@
 # video-transfer
 Serialize and send a video between one client and multiple servers.
 
-+++++++++++++++++++++++++++++++++++++**CLIENT**++++++++++++++++++++++++++++++++++
-
-sudo apt update
-
-sudo apt install -y python3 python3-pip
-
-sudo pip3 install numpy pandas scipy
-
-sudo apt install -y libopencv-dev python3-opencv
-
-Copy 2 files: serialize-send-client.py and client.py. Run 'python3 client.py'.
-
-
 +++++++++++++++++++++++++++++++++++++**SERVER**+++++++++++++++++++++++++++++++++
 
 sudo apt update
@@ -33,3 +20,15 @@ netstat -an | grep :3333
 sudo ufw allow 3333
 
 Then run 'python3 server.py'.
+
++++++++++++++++++++++++++++++++++++++**CLIENT**++++++++++++++++++++++++++++++++++
+
+sudo apt update
+
+sudo apt install -y python3 python3-pip
+
+sudo pip3 install numpy pandas scipy
+
+sudo apt install -y libopencv-dev python3-opencv
+
+Copy 2 files: serialize-send-client.py and client.py. Run 'python3 client.py' (run the code in server first).
