@@ -31,4 +31,4 @@ sudo pip3 install numpy pandas scipy
 
 sudo apt install -y libopencv-dev python3-opencv
 
-Copy 2 files: serialize-send-client.py and client.py. Run 'python3 client.py' (run the code in server first).
+Copy 2 files: serialize-send-client.py and client.py. Run 'python3 client.py' (run 'server.py' in servers first).
