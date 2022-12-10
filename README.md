@@ -30,6 +30,6 @@ netstat -lntu
 
 netstat -an | grep :3333
 
-sudo ufw allow 333
+sudo ufw allow 3333
 
 Then run 'python3 server.py'.
