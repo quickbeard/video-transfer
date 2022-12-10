@@ -14,23 +14,24 @@ FRAME_LIM = 800 # Stop receiving after receving this number of frames
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print('Socket created')
+
 server_socket.bind((IP, PORT))
 print('Socket bind completed')
+
 server_socket.listen(10)
 print(f'Socket now listening on {IP}:{PORT}')
 
 def process_data(conn, ip_addr):
     OUTPUT_CSV = 'host-' + ip_addr + '_server-' + IP + '.csv'
     timestamp_list = []
-    data = b''
-    payload_size = struct.calcsize('Q')
+    data = b''; payload_size = struct.calcsize('Q')
     frame_count = 0; total_time = 0
+    
     while True:   
         # Retrieve message size
         while len(data) < payload_size:
             data += conn.recv(BUFFER_SIZE)
-        if not data:
-            break
+        if not data: break
             
         curr = time.time()  # Current time
         if frame_count == 0:
@@ -50,8 +51,7 @@ def process_data(conn, ip_addr):
             data += conn.recv(BUFFER_SIZE)
         data = data[msg_size:]
 
-        if frame_count == FRAME_LIM:
-            break
+        if frame_count == FRAME_LIM: break
 
     # print()
     # print('Average tranfer time of each frame:', round(total_time/frame_count, 4))
