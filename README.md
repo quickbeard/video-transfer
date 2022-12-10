@@ -14,7 +14,7 @@ sudo apt install -y libopencv-dev python3-opencv
 Copy 2 files: serialize-send-client.py and client.py. Run 'python3 client.py'.
 
 
-+++++++++++++++++++++++++++++++++++++**SERVER**++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++**SERVER**++++++++++++++++++++++++++++++++++
 
 sudo apt update
 
